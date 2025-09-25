@@ -1,0 +1,18 @@
+$TTL 86400
+@   IN  SOA     ns1.semita.sv. admin.semita.sv. (
+        2024012001  ; Serial
+        3600        ; Refresh
+        1800        ; Retry
+        604800      ; Expire
+        86400       ; Minimum TTL
+)
+
+; Servidores de nombres
+        IN  NS      ns1.semita.sv.
+        IN  NS      ns2.semita.sv.
+
+; Registros PTR para IPv4
+2.0     IN  PTR     ns1.semita.sv.
+3.0     IN  PTR     ns2.semita.sv.
+10.0    IN  PTR     www.semita.sv.
+20.0    IN  PTR     mail.semita.sv.
