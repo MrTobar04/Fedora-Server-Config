@@ -14,14 +14,14 @@ $TTL 86400
 ; Registros A (IPv4)
 ns1     IN  A       172.16.0.2
 ns2     IN  A       172.16.0.3
-www     IN  A       172.16.0.10
+www     IN  A       172.16.0.2
 mail    IN  A       172.16.0.20
 @       IN  A       172.16.0.10
 
 ; Registros AAAA (IPv6)
 ns1     IN  AAAA    2001:db7:dea:a::2
 ns2     IN  AAAA    2001:db7:dea:a::3
-www     IN  AAAA    2001:db7:dea:a::10
+www     IN  AAAA    2001:db7:dea:a::2
 mail    IN  AAAA    2001:db7:dea:a::20
 @       IN  AAAA    2001:db7:dea:a::10
 

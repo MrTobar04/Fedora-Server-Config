@@ -14,5 +14,5 @@ $TTL 86400
 ; Registros PTR para IPv4
 2.0     IN  PTR     ns1.semita.sv.
 3.0     IN  PTR     ns2.semita.sv.
-10.0    IN  PTR     www.semita.sv.
+2.0    IN  PTR     www.semita.sv.
 20.0    IN  PTR     mail.semita.sv.
