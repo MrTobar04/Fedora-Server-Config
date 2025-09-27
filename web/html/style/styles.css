@@ -1,0 +1,49 @@
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                  url("https://getfedora.org/static/images/fedora-server.png") center/cover no-repeat;
+      color: white;
+      padding: 120px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.3rem;
+      margin-top: 15px;
+    }
+    .features i {
+      font-size: 3rem;
+      color: #0275d8;
+      margin-bottom: 15px;
+    }
+    .team-section {
+      background: #f8f9fa;
+      padding: 60px 20px;
+    }
+    .team-section h2 {
+      font-weight: 700;
+      margin-bottom: 40px;
+    }
+    .creator-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .center-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin: 30px 0;
+    }
+    footer {
+      background: #222;
+      color: #aaa;
+      padding: 20px 0;
+      text-align: center;
+    }

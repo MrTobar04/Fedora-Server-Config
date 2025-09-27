@@ -88,9 +88,12 @@ interface enp0s8 {
 };
 ```
 
-### Instalar y configurar Kea DHCP
+### Instalar y habilitar Kea DHCP
 ```bash
 sudo dnf install kea
+
+sudo systemctl enable kea-dhcp4.service
+sudo systemctl enable kea-dhcp6.service
 ```
 
 #### Configuración DHCPv4: `/etc/kea/kea-dhcp4.conf`
@@ -322,3 +325,45 @@ nslookup 172.16.0.10
 ```
 
 
+## 3. Configuración del Servicio WEB
+
+### Descargar apache2
+
+```bash
+sudo dnf install httpd -y
+sudo service httpd restart¨
+sudo systemctl enable httpd
+```
+
+### Reglas de Firewall para http
+
+```bash
+sudo firewall-cmd --zone=internal --add-rich-rule='rule family="ipv4" source address="172.16.0.0/24" service name="http" accept' --permanent 
+sudo firewall-cmd --zone=internal --add-rich-rule='rule family="ipv6" source address="2001:db7:dea:a::/64" service name="http" accept' --
+sudo firewall-cmd --reload
+```
+
+### Reglas de Firewall para https
+
+```bash
+sudo firewall-cmd --zone=internal --add-rich-rule='rule family="ipv4" source address="172.16.0.0/24" service name="https" accept' --permanent 
+sudo firewall-cmd --zone=internal --add-rich-rule='rule family="ipv6" source address="2001:db7:dea:a::/64" service name="https" accept' --permanent
+sudo firewall-cmd --reload
+```
+
+### Ver reglas
+
+```bash
+sudo firewall-cmd --zone=internal --list-rich-rules
+```
+
+### Modificar index.html y recursos personalizados
+
+
+```bash
+sudo cd /var/www/html
+```
+
+### Probar desde el cliente
+
+Abrir el navegador y buscar `www.semita.sv`.
